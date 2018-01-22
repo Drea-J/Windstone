@@ -1,0 +1,139 @@
+#example {
+  position: relative;
+  overflow: hidden;
+  margin-top: 61px;
+  background: transparent;
+}
+#example .frame {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  padding-bottom: 20px;
+}
+#example .iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#example .frame .slide_element {
+  height: 100%;
+}
+#example .frame .slide_element .slide {
+  float: left;
+  height: 100%;
+  margin: 0 -350px;
+  opacity: 0;
+  background: #000;
+  z-index: 5;
+  border-radius: 10px;
+
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+
+  -webkit-transition: -webkit-transform 1500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition: transform 1500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  transition-property: opacity, transform;
+}
+#example .frame .slide_element .slide.next_1,
+#example .frame .slide_element .slide.prev_1 {
+  opacity: 0.7;
+  z-index: 9;
+
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+#example .frame .slide_element .slide.next_2,
+#example .frame .slide_element .slide.prev_2 {
+  opacity: 0.4;
+  z-index: 8;
+
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+#example .frame .slide_element .slide.active {
+  opacity: 1;
+  z-index: 10;
+
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+#example #progress {
+  position: absolute;
+  border-radius: 50%;
+  margin: auto;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+#example #thumbnails {
+  display: block;
+  text-align: center;
+  height: 80px;
+}
+#example #thumbnails > div {
+  height: 100%;
+  width: 100%;
+}
+#example #thumbnails > div > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#example #thumbnails > div > ul > li {
+  width: 80px;
+  height: 80px;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 3px;
+  border: 4px transparent solid;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+#example #thumbnails > div > ul > li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#example #thumbnails > div > ul > li.active {
+  opacity: 1;
+}
+#example .mSButtons.mSPrev {
+  left: 15%;
+  right: auto;
+  bottom: 30px;
+}
+#example .mSButtons.mSNext {
+  right: 15%;
+  left: auto;
+  bottom: 30px;
+}
+#example.isTouch .mSButtons {
+  display: none;
+}
+#example .mSCaption {
+  left: 20px;
+  bottom: 40px;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 300;
+  color: #000;
+  opacity: 0;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  z-index: 1002;
+
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#example .mSCaption.showed {
+  bottom: 20px;
+  opacity: 1;
+}
